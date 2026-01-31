@@ -10,17 +10,17 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Attendance {
-    
+public class Asistencia {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate date;
+    private LocalDate fecha;
 
-    private boolean present;
+    private boolean presente;
 
     @ManyToOne
-    @JoinColumn(name = "student_id")
-    private Student student;
+    @JoinColumn(name = "Estudiante_id")
+    private Estudiante estudiante;
 }

@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Student {
+public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,7 +16,7 @@ public class Student {
     @Column(unique = true)
     private String dni;
 
-    private String firstName;
-    private String lastName;
+    private String Nombre;
+    private String Apellido;
     
 }
