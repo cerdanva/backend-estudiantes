@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.cerdan.attendance_system.service;
 
 import com.cerdan.attendance_system.model.Estudiante;
@@ -18,13 +15,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class EstudianteServicio implements EstudianteServicioInt {
 
-   
     private EstudianteRepositorio estudianteRepositorio;
 
     public EstudianteServicio(EstudianteRepositorio estudianteRepositorio) {
         this.estudianteRepositorio = estudianteRepositorio;
     }
-    
+
     @Override
     public List<Estudiante> listarEstudiante() {
         return estudianteRepositorio.findAll();
@@ -33,12 +29,12 @@ public class EstudianteServicio implements EstudianteServicioInt {
     @Override
     public Estudiante buscarEstudiantePorId(Long id) {
         return estudianteRepositorio.findById(id).orElseThrow(() -> new RuntimeException("No existe el estudiante"));
-        
+
     }
 
     @Override
     public Estudiante guardarEstudiante(Estudiante estudiante) {
         return estudianteRepositorio.save(estudiante);
     }
-    
+
 }
