@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EstudianteController {
 
     private final EstudianteServicio estudianteServicio;
+    private final String BASE_URL = "/api/estudiantes";
 
     public EstudianteController(EstudianteServicio estudianteServicio) {
         this.estudianteServicio = estudianteServicio;
